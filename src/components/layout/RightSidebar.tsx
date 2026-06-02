@@ -166,7 +166,9 @@ const RightSidebar: React.FC = () => {
                 <div className="flex items-center space-x-2">
                   {perfiles[user.id]?.img ? (
                     <img 
-                      src={`${config.apiUrl}/uploads/${perfiles[user.id].img}`}
+                      src={perfiles[user.id].img.startsWith('http')
+                        ? perfiles[user.id].img
+                        : `${config.apiUrl}/uploads/${perfiles[user.id].img}`}
                       alt={`${user.nombre} ${user.apellido}`}
                       className="w-10 h-10 rounded-full object-cover"
                     />

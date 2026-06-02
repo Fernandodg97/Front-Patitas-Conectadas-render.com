@@ -222,7 +222,9 @@ const Amigos: React.FC = () => {
         // Actualizar el caché de imágenes para los resultados de búsqueda
         filteredResults.forEach(result => {
           if (result.img) {
-            const imageUrl = `${config.apiUrl}/uploads/${result.img}`;
+            const imageUrl = result.img.startsWith('http')
+              ? result.img
+              : `${config.apiUrl}/uploads/${result.img}`;
             updateUserImagesCache(Number(result.id), imageUrl);
           }
         });

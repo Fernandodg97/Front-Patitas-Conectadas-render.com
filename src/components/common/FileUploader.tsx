@@ -104,9 +104,17 @@ const FileUploader: React.FC<FileUploaderProps> = ({
       }
 
       // Construir la URL según la configuración
-      const imageUrl = returnFullUrl 
-        ? `${config.apiUrl}/uploads/${responseData.img}`
-        : responseData.img;
+      let imageUrl: string;
+      if (returnFullUrl) {
+        // Si ya es una URL completa, devolverla tal cual
+        if (responseData.img.startsWith('http')) {
+          imageUrl = responseData.img;
+        } else {
+          imageUrl = `${config.apiUrl}/uploads/${responseData.img}`;
+        }
+      } else {
+        imageUrl = responseData.img;
+      }
       
       console.log('URL de la imagen construida:', imageUrl);
 

@@ -249,9 +249,11 @@ const Perfil: React.FC = () => {
           setFechaNacimiento(normalizedProfile.fecha_nacimiento);
           
           if (normalizedProfile.img) {
-          const imageUrl = `${config.apiUrl}/uploads/${normalizedProfile.img}`;
-          console.log('URL de imagen construida:', imageUrl);
-          setImagePreview(imageUrl);
+            const imageUrl = normalizedProfile.img.startsWith('http')
+              ? normalizedProfile.img
+              : `${config.apiUrl}/uploads/${normalizedProfile.img}`;
+            console.log('URL de imagen construida:', imageUrl);
+            setImagePreview(imageUrl);
             setProfileImageUrl(normalizedProfile.img);
           }
           }
@@ -486,7 +488,9 @@ const Perfil: React.FC = () => {
       setFechaNacimiento(updatedProfile.fecha_nacimiento || '');
       
       if (updatedProfile.img) {
-        const imageUrl = `${config.apiUrl}/uploads/${updatedProfile.img}`;
+        const imageUrl = updatedProfile.img.startsWith('http')
+          ? updatedProfile.img
+          : `${config.apiUrl}/uploads/${updatedProfile.img}`;
         setImagePreview(imageUrl);
         setProfileImageUrl(updatedProfile.img);
         

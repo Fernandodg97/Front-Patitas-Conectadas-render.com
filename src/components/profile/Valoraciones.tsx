@@ -198,7 +198,9 @@ const Valoraciones: React.FC<ValoracionesProps> = ({ userId, isOwnProfile, curre
                 <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-200">
                   {perfilesAutores[valoracion.autorId]?.img ? (
                     <img
-                      src={`${config.apiUrl}/uploads/${perfilesAutores[valoracion.autorId].img}`}
+                      src={perfilesAutores[valoracion.autorId].img.startsWith('http')
+                        ? perfilesAutores[valoracion.autorId].img
+                        : `${config.apiUrl}/uploads/${perfilesAutores[valoracion.autorId].img}`}
                       alt={`${valoracion.nombreAutor} ${valoracion.apellidoAutor}`}
                       className="w-full h-full object-cover"
                       onError={(e) => {

@@ -47,8 +47,12 @@ const MascotaCard: React.FC<MascotaCardProps> = ({
   // Construir la URL completa de la imagen
   const getImageUrl = (foto?: string): string | null => {
     if (!foto) return null;
-    // Asegurarnos de que la URL comienza con /uploads
-    const cleanPath = foto.startsWith('/uploads') ? foto : `/uploads${foto.startsWith('/') ? foto : `/${foto}`}`;
+    
+    // Si ya es una URL completa (Cloudinary), devolverla tal cual
+    if (foto.startsWith('http')) return foto;
+    
+    // Si es una ruta local, construir la URL completa
+    const cleanPath = foto.startsWith('/') ? foto : `/${foto}`;
     return `${config.apiUrl}${cleanPath}`;
   };
 
