@@ -5,7 +5,10 @@
 [![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-SPA de la red social **Patitas Conectadas**, desarrollada como Proyecto Final de Grado (DAW) y llevada a producción de forma autónoma tras la entrega.
+Frontend de la red social para dueños de mascotas **Patitas Conectadas**. SPA construida con React 19 y TypeScript, con autenticación JWT, subida de imágenes a Cloudinary y consumo de una API REST propia en Spring Boot. Desplegada en producción en Render.
+
+> **🌐 Demo app** → [front-patitas-conectadas-render-com.onrender.com](https://front-patitas-conectadas-render-com.onrender.com)  
+> Usuario de prueba: `usuario@usuario.com` · Contraseña: `usuario` · ⏱️ Los servicios pueden tardar ~30s en arrancar (plan gratuito de Render).
 
 ---
 
