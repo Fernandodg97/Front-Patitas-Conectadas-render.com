@@ -2,7 +2,8 @@
 
 Frontend de la red social para dueños de mascotas **Patitas Conectadas**. Construido con React 19 + TypeScript, consume la [API REST](https://github.com/Fernandodg97/API-PatitasConectadas-Docker) desarrollada con Spring Boot 3 y desplegada en Render.
 
-> **Demo en producción** → [api-patitasconectadas-docker.onrender.com](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html)  
+> **🌐 Demo frontend** → [front-patitas-conectadas-render-com.onrender.com](https://front-patitas-conectadas-render-com.onrender.com)  
+> **🔧 Demo API (Swagger)** → [api-patitasconectadas-docker.onrender.com/swagger-ui](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html)  
 > Usuario de prueba: `usuario@usuario.com` · Contraseña: `usuario`
 
 ---
