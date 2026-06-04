@@ -1,49 +1,47 @@
-# Patitas Conectadas 🐾
+# Patitas Conectadas — Frontend 🐾
 
-Frontend de la red social para dueños de mascotas **Patitas Conectadas**. Construido con React 19 + TypeScript, consume la [API REST](https://github.com/Fernandodg97/API-PatitasConectadas-Docker) desarrollada con Spring Boot 3 y desplegada en Render.
+[![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-> **🌐 Demo frontend** → [front-patitas-conectadas-render-com.onrender.com](https://front-patitas-conectadas-render-com.onrender.com)  
-> **🔧 Demo API (Swagger)** → [api-patitasconectadas-docker.onrender.com/swagger-ui](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html)  
-> Usuario de prueba: `usuario@usuario.com` · Contraseña: `usuario`
+SPA de la red social **Patitas Conectadas**, desarrollada como Proyecto Final de Grado (DAW) y llevada a producción de forma autónoma tras la entrega.
 
 ---
 
 ### 👋 Para recruiters
 
-Frontend SPA desarrollado de forma autónoma como proyecto personal de portafolio, integrado con una API REST propia.
+Frontend completo de una red social para dueños de mascotas, construido de cero e integrado con una API REST propia en Spring Boot.
 
-**Stack:** React 19 · TypeScript · Vite 6 · Tailwind CSS · React Router v6 · Axios · JWT
+**¿Qué demuestra este repositorio?**
 
-**Destacado:**
-- 🔐 **Autenticación JWT** con rutas protegidas y persistencia de sesión en `localStorage`
-- 🖼️ **Subida de imágenes** con `multipart/form-data` hacia Cloudinary a través del backend
-- 📱 **Diseño responsive** con navegación adaptada a móvil (`MobileBottomNav`) y escritorio (`Sidebar`)
-- 🧩 **Arquitectura modular** — componentes, servicios, contextos y vistas claramente separados
-- 🌐 **Desplegado en producción** en Render, conectado a una API REST también en Render
-
-### 🔑 Acceso rápido a la demo
+- ✅ Construir una SPA en **React 19 + TypeScript** con arquitectura modular (vistas, componentes, servicios, contextos)
+- ✅ Implementar **autenticación JWT** con rutas protegidas y persistencia de sesión
+- ✅ Consumir una API REST con **Axios**, incluyendo subida de imágenes `multipart/form-data` a Cloudinary
+- ✅ Aplicar **diseño responsive** con Tailwind CSS — navegación adaptada a móvil y escritorio
+- ✅ Desplegar en **producción** como static site en Render, conectado a un backend dockerizado
 
 | | |
 |---|---|
-| **App** | [front-patitas-conectadas-render-com.onrender.com](https://front-patitas-conectadas-render-com.onrender.com) |
-| **API (Swagger)** | [api-patitasconectadas-docker.onrender.com/swagger-ui](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html) |
-| **Usuario de prueba** | `usuario@usuario.com` |
-| **Contraseña** | `usuario` |
+| 🌐 **App en producción** | [front-patitas-conectadas-render-com.onrender.com](https://front-patitas-conectadas-render-com.onrender.com) |
+| 🔧 **API (Swagger)** | [api-patitasconectadas-docker.onrender.com/swagger-ui](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html) |
+| 🗄️ **Repositorio backend** | [API-PatitasConectadas-Docker](https://github.com/Fernandodg97/API-PatitasConectadas-Docker) |
+| 📋 **Proyecto general (TFG)** | [Patitas-Conectadas](https://github.com/Fernandodg97/Patitas-Conectadas) |
+
+> ⏱️ Usuario demo: `usuario@usuario.com` · Contraseña: `usuario` · Los servicios pueden tardar ~30s en arrancar (plan gratuito de Render).
 
 ---
 
-## Características
+## 🚀 Mejoras Post-Práctica
 
-- **🔒 Autenticación JWT** — Registro, login y rutas protegidas. El token se guarda en `localStorage` bajo la clave `auth_token`
-- **🏠 Feed Social** — Publicaciones con imagen, comentarios y reacciones
-- **👥 Red de Amigos** — Seguir usuarios, gestionar seguidores y buscador de usuarios
-- **🐾 Mascotas** — Registrar y administrar mascotas por perfil con foto
-- **📅 Eventos** — Crear, descubrir y apuntarse a eventos de la comunidad
-- **👥 Grupos** — Unirse y gestionar grupos temáticos con roles (Admin / Miembro)
-- **💾 Posts Guardados** — Guardar publicaciones para consultar después
-- **🔔 Notificaciones** — Centro de notificaciones con dropdown
-- **💬 Chat** — Mensajería directa entre usuarios con estado visto/no visto
-- **🏢 Protectoras** — Sección dedicada a organizaciones de rescate
+El TFG entregado funcionaba en local. Tras la defensa, Fernando continuó de forma autónoma para llevarlo a producción real:
+
+| Mejora | Detalle |
+|---|---|
+| ☁️ **Despliegue en producción** | Frontend desplegado como static site en Render, con build de Vite optimizado |
+| 🖼️ **Integración Cloudinary** | Subida de imágenes `multipart/form-data` al backend, que delega en Cloudinary y devuelve la URL pública |
+| 🔗 **Soporte URLs remotas** | Adaptación para manejar URLs completas de Cloudinary devueltas por la nueva versión del backend |
+| 🗄️ **Conexión a Supabase** | La API consume PostgreSQL en Supabase — el frontend no requiere ninguna base de datos local para funcionar |
 
 ---
 
@@ -61,7 +59,38 @@ Frontend SPA desarrollado de forma autónoma como proyecto personal de portafoli
 | Fechas | date-fns |
 | Iconos | React Icons |
 
-**Backend asociado:** Java 21 · Spring Boot 3 · Spring Security · JWT · PostgreSQL (Supabase) · Cloudinary · Docker
+**Backend asociado:** Java 21 · Spring Boot 3 · Spring Security + JWT · PostgreSQL (Supabase) · Cloudinary · Docker
+
+---
+
+## Funcionalidades implementadas
+
+| Módulo | Descripción |
+|---|---|
+| **Feed** | Publicaciones con imagen, comentarios y reacciones |
+| **Perfil** | Foto, bio, mascotas, seguidores/seguidos y valoraciones 1–5 ⭐ |
+| **Amigos** | Seguir usuarios, gestionar seguidores y buscador por nombre |
+| **Mascotas** | Registro con foto, especie, género y fecha de nacimiento |
+| **Eventos** | Crear y apuntarse a eventos con ubicación y fecha |
+| **Grupos** | Comunidades con roles Administrador / Miembro y posts propios |
+| **Chat** | Mensajería directa con estado visto/no visto |
+| **Notificaciones** | Centro de notificaciones con dropdown por usuario |
+| **Posts guardados** | Guardar publicaciones para consultar después |
+| **Protectoras** | Sección dedicada a organizaciones de rescate animal |
+
+---
+
+## Retos técnicos resueltos
+
+**Autenticación y sesión** — JWT almacenado en `localStorage`, adjuntado automáticamente en cada request con Axios. Rutas protegidas con `ProtectedRoute` que redirige al login si no hay sesión activa.
+
+**Arquitectura modular** — Separación clara entre vistas (`/views`), componentes reutilizables (`/components`), servicios de API (`/services`), contextos globales (`/context`) y tipos TypeScript (`/types`).
+
+**Subida de imágenes** — Los formularios de posts, mascotas y perfil envían `multipart/form-data` al backend, que gestiona la subida a Cloudinary y devuelve la URL pública. El frontend muestra la imagen directamente desde Cloudinary.
+
+**Responsive** — Dos modos de navegación: `Sidebar` en escritorio y `MobileBottomNav` en móvil, construidos íntegramente con Tailwind CSS sin librerías externas de layout.
+
+**Gestión de estado** — `AuthContext` para la sesión del usuario y `UserContext` para los datos del perfil activo, accesibles desde cualquier componente sin prop drilling.
 
 ---
 
@@ -73,23 +102,21 @@ Frontend SPA desarrollado de forma autónoma como proyecto personal de portafoli
 https://api-patitasconectadas-docker.onrender.com
 ```
 
-Configurable mediante la variable de entorno `VITE_API_URL`. Si no se define, el frontend apunta a la instancia de producción en Render.
+Configurable mediante `VITE_API_URL`. Si no se define, apunta a la instancia de producción.
 
-### Autenticación
-
-1. `POST /auth/register` — Registro de nuevo usuario
-2. `POST /auth/login` — Devuelve un **token JWT**
-3. El token se almacena en `localStorage` (`auth_token`) y se envía en cada petición:
+### Flujo de autenticación
 
 ```
-Authorization: Bearer <token>
+POST /auth/login  →  { token: "eyJ..." }
+                          │
+                    localStorage["auth_token"]
+                          │
+              Authorization: Bearer <token>  →  cualquier endpoint protegido
 ```
-
-4. `GET /auth/me` — Devuelve el usuario autenticado con su perfil y mascotas
 
 ### Imágenes (Cloudinary)
 
-Las imágenes se almacenan en **Cloudinary**. Los endpoints que aceptan imagen usan `multipart/form-data`. El campo devuelto es siempre una URL pública:
+Los endpoints que aceptan imagen usan `multipart/form-data`. La respuesta incluye siempre una URL pública:
 
 ```
 https://res.cloudinary.com/<cloud>/image/upload/v.../nombre.jpg
@@ -100,9 +127,6 @@ https://res.cloudinary.com/<cloud>/image/upload/v.../nombre.jpg
 | Posts | `img` | 10 MB |
 | Mascotas | `foto` | 10 MB |
 | Perfiles | `img` | 10 MB |
-| Comentarios | `img` | 10 MB |
-
-Tipos permitidos: `image/jpeg`, `image/png`, `image/gif`, `image/webp`
 
 > Al actualizar o eliminar un recurso, la imagen anterior se borra automáticamente de Cloudinary.
 
@@ -124,66 +148,41 @@ Tipos permitidos: `image/jpeg`, `image/png`, `image/gif`, `image/webp`
 | Notificaciones | `GET /notificaciones`, `DELETE /notificaciones/{id}` |
 | Guardados | `GET /usuario-post/usuario/{id}`, `POST /usuario-post`, `DELETE /usuario-post/{id}` |
 
-> Documentación interactiva completa del backend en [`/swagger-ui/index.html`](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html)
+> Documentación interactiva completa en [`/swagger-ui/index.html`](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html)
 
 ---
 
 ## Instalación
 
-### Requisitos Previos
+### Requisitos
 - Node.js v18+
 - npm
 
 ### Pasos
 
-1. Clonar el repositorio
-   ```bash
-   git clone https://github.com/Fernandodg97/Front-Patitas-Conectadas-render.com.git
-   cd Front-Patitas-Conectadas-render.com
-   ```
+```bash
+git clone https://github.com/Fernandodg97/Front-Patitas-Conectadas-render.com.git
+cd Front-Patitas-Conectadas-render.com
+npm install
+npm run dev
+```
 
-2. Instalar dependencias
-   ```bash
-   npm install
-   ```
+Disponible en `http://localhost:5173`. Por defecto apunta a la API en producción.
 
-3. Configurar variables de entorno *(opcional — por defecto apunta a producción)*
-   ```env
-   VITE_API_URL=http://localhost:8080
-   ```
+Para apuntar al backend en local, crea un `.env`:
 
-4. Iniciar el servidor de desarrollo
-   ```bash
-   npm run dev
-   ```
-   Disponible en `http://localhost:5173`
-
-5. Build de producción
-   ```bash
-   npm run build
-   ```
+```env
+VITE_API_URL=http://localhost:8080
+```
 
 ### Levantar el backend en local
-
-Consulta [API-PatitasConectadas-Docker](https://github.com/Fernandodg97/API-PatitasConectadas-Docker) para instrucciones completas. Resumen rápido con Docker:
 
 ```bash
 git clone https://github.com/Fernandodg97/API-PatitasConectadas-Docker
 cd API-PatitasConectadas-Docker
-
-# Crear .env con las variables necesarias
+# Crear .env con DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD, CLOUDINARY_*
 docker build -t api-patitas .
 docker run -p 8080:8080 --env-file .env api-patitas
-```
-
-Variables de entorno necesarias en el backend:
-```env
-DATABASE_URL=jdbc:postgresql://<host>/<db>?sslmode=require
-DATABASE_USERNAME=...
-DATABASE_PASSWORD=...
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
 ```
 
 ---
@@ -193,35 +192,25 @@ CLOUDINARY_API_SECRET=...
 ```
 ├── public/                  # Avatares y placeholders por defecto
 ├── src/
-│   ├── assets/              # Logo e imágenes estáticas
 │   ├── components/          # Componentes UI reutilizables
 │   │   ├── amigos/          # Buscador y listados de amigos/seguidores
 │   │   ├── auth/            # Login, Register, ProtectedRoute
 │   │   ├── chat/            # ChatConversacion, MensajeItem
 │   │   ├── common/          # Botones, spinners, diálogos, EmojiPicker
 │   │   ├── eventos/         # EventoForm, EventosList, ParticipantesEvento
-│   │   ├── feed/            # Feed "Para Ti"
 │   │   ├── groups/          # GrupoCard, GrupoDetalle, GrupoForm, MiembrosGrupo
-│   │   ├── home/            # PostItem, PostForm, CommentSection y utilidades
+│   │   ├── home/            # PostItem, PostForm, CommentsSection y utilidades
 │   │   ├── layout/          # Navbar, Sidebar, MobileBottomNav, MainLayout
 │   │   ├── notificaciones/  # NotificacionesDropdown, NotificacionItem
-│   │   ├── post/            # Componentes de post individual
-│   │   ├── profile/         # ProfileHeader, ProfileDetails, MascotasList, etc.
-│   │   ├── routes/          # AppRoutes
+│   │   ├── profile/         # ProfileHeader, ProfileDetails, MascotasList
 │   │   └── Savedposts/      # PostCard y ComentariosLista
 │   ├── context/             # AuthContext (JWT), UserContext
-│   ├── routes/              # Índice de rutas
-│   ├── services/            # Servicios Axios por módulo (api.ts, postService.ts…)
-│   ├── types/               # Tipos TypeScript (Post, etc.)
-│   ├── utils/               # Funciones utilitarias
+│   ├── services/            # Servicios Axios por módulo
 │   ├── views/               # Vistas/páginas de la aplicación
-│   ├── config.ts            # URL de la API, paginación y límites de subida
-│   ├── App.tsx
-│   └── main.tsx
+│   ├── types/               # Tipos TypeScript
+│   ├── utils/               # Funciones utilitarias
+│   └── config.ts            # URL base, paginación y límites de subida
 ├── puml/                    # Diagramas PlantUML de arquitectura
-├── eslint.config.js
-├── tailwind.config.js
-├── vite.config.ts
 └── package.json
 ```
 
@@ -238,12 +227,12 @@ npm run lint      # Linter ESLint
 
 ---
 
-## Repositorios del Proyecto
+## Autores
 
-| Repositorio | Descripción |
+| | |
 |---|---|
-| [Front-Patitas-Conectadas-render.com](https://github.com/Fernandodg97/Front-Patitas-Conectadas-render.com) | Este repositorio — React + TypeScript |
-| [API-PatitasConectadas-Docker](https://github.com/Fernandodg97/API-PatitasConectadas-Docker) | Backend — Spring Boot 3 + Docker |
+| **Fernando Diaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) |
+| **Mouad Sedjari** | [github.com/Msedjari](https://github.com/Msedjari) |
 
 ---
 
