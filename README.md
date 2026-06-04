@@ -227,6 +227,10 @@ npm run build     # Build de producción
 npm run preview   # Preview del build
 npm run lint      # Linter ESLint
 ```
+---
+
+## Nota obtenida
+9 /10
 
 ---
 
