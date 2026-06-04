@@ -8,6 +8,30 @@ Frontend de la red social para dueños de mascotas **Patitas Conectadas**. Const
 
 ---
 
+### 👋 Para recruiters
+
+Frontend SPA desarrollado de forma autónoma como proyecto personal de portafolio, integrado con una API REST propia.
+
+**Stack:** React 19 · TypeScript · Vite 6 · Tailwind CSS · React Router v6 · Axios · JWT
+
+**Destacado:**
+- 🔐 **Autenticación JWT** con rutas protegidas y persistencia de sesión en `localStorage`
+- 🖼️ **Subida de imágenes** con `multipart/form-data` hacia Cloudinary a través del backend
+- 📱 **Diseño responsive** con navegación adaptada a móvil (`MobileBottomNav`) y escritorio (`Sidebar`)
+- 🧩 **Arquitectura modular** — componentes, servicios, contextos y vistas claramente separados
+- 🌐 **Desplegado en producción** en Render, conectado a una API REST también en Render
+
+### 🔑 Acceso rápido a la demo
+
+| | |
+|---|---|
+| **App** | [front-patitas-conectadas-render-com.onrender.com](https://front-patitas-conectadas-render-com.onrender.com) |
+| **API (Swagger)** | [api-patitasconectadas-docker.onrender.com/swagger-ui](https://api-patitasconectadas-docker.onrender.com/swagger-ui/index.html) |
+| **Usuario de prueba** | `usuario@usuario.com` |
+| **Contraseña** | `usuario` |
+
+---
+
 ## Características
 
 - **🔒 Autenticación JWT** — Registro, login y rutas protegidas. El token se guarda en `localStorage` bajo la clave `auth_token`
